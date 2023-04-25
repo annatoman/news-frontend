@@ -4,11 +4,11 @@ export function ArticlesIndex(props) {
         <h1>All Articles</h1>
         {props.articles.map((article) => (
             <div key={article.title}>
-                <h1>{article.author}</h1>
-                <h1>{article.description}</h1>
-                <h1>{article.content}</h1>                
+                <p>{article.author}</p>
+                <p>{article.description}</p>
+                <p>{article.content}</p>                
             </div>
-        ))}
+        ))};
       </div>
     );
   }

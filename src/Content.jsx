@@ -8,12 +8,19 @@ export function Content() {
 
   const handleArticlesIndex = () => {
     console.log("handleArticlesIndex");
-    axios.get()
-  }
+    axios
+      .get("http://localhost:3000/articles.json")
+      .then((response) => {
+      console.log(response.data);
+      setArticles(response.data.articles);
+    });
+  };
+
+    useEffect(handleArticlesIndex, []);
 
     return (
       <div>
-        <<ArticlesIndex articles={articles} />
+        <ArticlesIndex articles={articles}/>
       </div>
     )
   }
